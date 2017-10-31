@@ -1,0 +1,40 @@
+<div class="contentContainer" id="config">
+    <h1>Configuratie</h1>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 ">
+            <div class="panel panel-default">
+                <div class="panel-heading upperbar">Configuratiemogelijkheden</div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <form action="" class="form-horizontal" ng-submit="submit($event)">
+                            <div class="form-group">
+                                <label for="schooljaar" class="control-label">Schooljaar:</label><br>
+                                <input type="text" class="form-control" name="schooljaar" id="schooljaar" value="{{schooljaar}}" ng-model="schooljaar">
+                            </div>
+                            <div class="form-group">
+                                <label for="Instituutnummer" class="control-label">Instituutnummer informat:</label><br>
+                                <input type="text" class="form-control" name="Instituutnummer" id="Instituutnummer" value="{{instituutnummer}}" ng-model="instituutnummer">
+                            </div>
+                            <div class="form-group">
+                                <label for="versioninformat" class="control-label">Webservice versie informat:</label><br>
+                                <input type="text" class="form-control fix2" value="https://testservices.informatsoftware.be/icursisten/" readonly>
+                                <input type="text" class="form-control fix" name="versioninformat" id="versioninformat" value="{{versioninformat}}" ng-model="versioninformat">
+                            </div>
+                            <div class="form-group">
+                                <label for="versionsmartschool" class="control-label">Webservice versie smartschool:</label><br>
+                                <input type="text" class="form-control fix2" value="https://cvo-crescendo-slo.smartschool.be/Webservices/" readonly>
+                                <input type="text" class="form-control fix" name="versionsmartschool" id="versionsmartschool" value="{{versionsmartschool}}" ng-model="versionsmartschool">
+                            </div>
+                            <div class="form-group">
+                                <label for="keysmartschool" class="control-label">Webservice key smartschool:</label><br>
+                                <input type="text" class="form-control" name="keysmartschool" id="keysmartschool" value="{{keysmartschool}}" ng-model="keysmartschool">
+                            </div>
+                            <input type="submit" value="opslaan" id="opslaan" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

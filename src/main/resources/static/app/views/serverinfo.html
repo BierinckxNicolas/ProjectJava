@@ -1,0 +1,57 @@
+<div class="contentContainer" id="serverinfo">
+    <h1>Serverinfo</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card clearfix">
+                <div class="card-block status">
+                    <div class="clearfix">
+                        <div class="dashKaartLinks">
+                            <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="dashKaartRechts">
+                            <p class="card-title" ng-model="status">Status : {{status}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card clearfix">
+                <div class="card-block uptime">
+                    <div class="clearfix">
+                        <div class="dashKaartLinks">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="dashKaartRechts">
+                            <p class="card-title" ng-model="uptime">Up : {{uptime}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card clearfix">
+                <div class="card-block cpu">
+                    <div class="clearfix">
+                        <div class="dashKaartLinks">
+                            <i class="fa fa-calculator" aria-hidden="true"></i>
+                        </div>
+                        <div class="dashKaartRechts">
+                            <p class="card-title" ng-model="cpu">CPU's : {{cpu}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row2">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="charts">
+                <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-colors="colors" chart-options="options">>
+                </canvas>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

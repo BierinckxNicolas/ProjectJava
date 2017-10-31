@@ -1,0 +1,766 @@
+@import "normalize.min.css";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*
+##############################
+GENERAL
+##############################
+ */
+.clearfix {
+    position: relative;
+    clear: both;
+    overflow: hidden;
+}
+body, html {
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f0f0f0;
+}
+h1 {
+    text-align: center;
+}
+.contentContainer {
+    padding: 40px 0 80px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn-primary{
+    border-color: #6891A2 !important;
+}
+a:hover{
+    text-decoration: none;
+}
+/*
+##############################
+LOGIN
+##############################
+ */
+
+#login .card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+#login .card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+#login .profile-img-card {
+    width: 195px;
+    height: 195px;
+    margin: 0 auto 10px;
+    display: block;
+}
+/*
+##############################
+FORM STYLES
+##############################
+ */
+#login .profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+#login .reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#login .form-signin #username,
+#login .form-signin #pwd {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+#login .form-signin input[type=email],
+#login .form-signin input[type=password],
+#login .form-signin input[type=text],
+#login .form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#login .form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+#login .btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+#login .btn.btn-signin:hover,
+#login .btn.btn-signin:active,
+#login .btn.btn-signin:focus {
+    background-color: #009999;
+}
+
+#login .forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+#login .forgot-password:hover,
+#login .forgot-password:active,
+#login .forgot-password:focus{
+    background-color: #009999;
+}
+#login .alert {
+    background-color: #c40e1f;
+    color: white;
+}
+/*
+##############################
+NAVIGATION
+##############################
+ */
+.navbar {
+    margin-bottom:0;
+    border-radius: 0;
+}
+.navbar-brand {
+    line-height: 50px;
+    padding: 0;
+    padding-left: 15px;
+    width: 60%;
+    color: white !important;
+}
+#page-wrapper {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:52px;
+    left:0;
+    overflow: scroll;
+}
+
+#page-viewport {
+    position:relative;
+    width:100%;
+    height:100%;
+    -webkit-transition:.5s ease all;
+    -moz-transition:.5s ease all;
+    -o-transition:.5s ease all;
+    transition: .5s ease all;
+}
+#sidebar {
+    position: fixed;
+    width: 250px;
+    min-height: 1000%;
+    left:-200px;
+    border-right: 1px solid #f0f0f0;
+    background-color:#757575;
+}
+#sidebar h3 {
+    color: white;
+    display:inline;
+    position:relative;
+    top: 12px;
+    left:15px;
+}
+#sidebar a:hover {
+    text-decoration:none;
+}
+
+#sidebar-header {
+    height: 50px;
+    border-bottom:1px solid #f0f0f0;
+}
+#sidebar-page-content {
+    position:absolute;
+    width: -webkit-calc(100% - 50px);
+    width: -moz-calc(100% - 50px);
+    left:50px;
+    -webkit-transition:.5s ease all;
+    -moz-transition:.5s ease all;
+    -o-transition:.5s ease all;
+    transition: .5s ease all;
+    width: 100%;
+}
+#page-wrapper.show-sidebar #page-viewport {
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    position: relative;
+}
+#page-wrapper.show-sidebar #sidebar-page-content {
+    width: -webkit-calc(100% - 250px);
+    width: -moz-calc(100% - 250px);
+    position: absolute;
+}
+.burger {
+    font-weight: 700;
+    height: 36px;
+    padding-top: 10px;
+}
+#sidebar-header .btn-default {
+    color: white;
+    background-color: transparent !important;
+    border: none !important;
+    padding-right: 18px;
+}
+#sidebar-header .btn-default:hover {
+    color: white;
+    background-color: transparent !important;
+    border: none !important;
+}
+#sidebar a {
+    color: white;
+}
+.nav>li>a {
+    padding-right: 18px;
+}
+#sidebar a:hover, .nav>li>a:focus, .nav>li>a:active, #sidebar-header:hover {
+    background-color: #4f4f4f;
+}
+.topnav {
+    padding: 15px;
+    margin: 0;
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+.topnav li {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    color: white !important;
+    height: 20px;
+    font-size: 16px;
+}
+
+.logout:hover, .fa-download:hover, .fa-user:hover, .fa-cog:hover {
+    text-decoration: none;
+    color: #757575;
+}
+.topnav li:last-child {
+    margin-right: 0;
+}
+.topnav li a {
+    color: white !important;
+}
+
+.user, .logout {
+    margin-left: 30px;
+}
+
+.right {
+    float: right;
+}
+.noDeco:hover , .noDeco:focus {
+    text-decoration: none;
+}
+
+.logo-segue {
+    display: inline-block !important;
+    padding-right: 15px;
+    height: 35px;
+}
+/*
+##############################
+DASHBOARD
+##############################
+ */
+
+#dashboard .card {
+    color: white;
+    font-size: 14px;
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 20px 20px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#dashboard .dashKaartLinks {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    float: left;
+    font-size: 300%;
+    width: 25%;
+    margin-right: 10%;
+}
+
+#dashboard .dashKaartRechts {
+    width: 65%;
+    float: right;
+}
+
+#dashboard .card h3 {
+    text-align: left;
+    font-size: 150%;
+}
+
+#dashboard .chart1, .chart2 {
+    display: block;
+    margin: 0 auto;
+}
+
+#dashboard .chart2 img, .chart1 img {
+    display:block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#dashboard .card {
+    margin-top: 25px !important;
+}
+
+#dashboard .charts {
+    height: 450px;
+    width: 450px;
+    margin: 0 auto;
+}
+#dashboard .showFix {
+    color: black;
+}
+/*
+##############################
+SERVICEBEHEER
+##############################
+ */
+#servicebeheer h1 {
+    text-align: center;
+}
+#servicebeheer .card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 20px 20px;
+    margin: 0 auto 25px;
+    margin-top: 25px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#servicebeheer .ServiceKaartLinks, .ServiceKaartRechts {
+    float: left;
+    width: 50%;
+}
+.ServiceKaartLinks{
+    padding-top: 10px;
+}
+#servicebeheer .toggle, .toggle-on, .toggle-off {
+    border-radius: 20px;
+}
+#servicebeheer .toggle .toggle-handle {
+    border-radius: 20px;
+}
+
+#servicebeheer .toggle {
+    margin-left: 40%;
+}
+
+#servicebeheer .sync, #servicebeheer .turnOff {
+    float: left;
+}
+#servicebeheer .btn-primary {
+    background-color: #6891A2;
+}
+#servicebeheer .btn-default.active{
+    color: white;
+    background-color: #d9534f;
+}
+#servicebeheer .sync{
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+
+/*
+##############################
+MAILBEHEER
+##############################
+ */
+#mailbeheer h1 {
+    text-align: center;
+}
+
+
+#mailbeheer h3 {
+    text-align: center;
+}
+
+
+#mailbeheer .row {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+
+#mailbeheer .btn.btn-info {
+
+    background-color: #6891A2;
+    margin: 10px 10px 10px 5px;
+    padding: 5px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+#mailbeheer .btn.btn-info:hover,
+#mailbeheer .btn.btn-info:active,
+#mailbeheer .btn.btn-info:focus {
+    background-color: #009999;
+}
+
+
+/*
+##############################
+PUNTENBEHEER
+##############################
+ */
+#puntenbeheer h1 {
+    text-align: center;
+}
+
+#puntenbeheer .form-group {
+    margin-bottom: 35px;
+}
+
+#puntenbeheer .col-lg-3 {
+    margin-bottom: 5px;
+
+}
+
+#puntenbeheer .col-lg-8 {
+    margin-bottom: 5px;
+}
+
+#puntenbeheer .col-lg-1 {
+    margin-bottom: 5px;
+    margin-top: 8px;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+
+#puntenbeheer .btn.btn-info {
+
+    background-color: #6891A2;
+    margin: 10px 0 -25px 5px;
+    padding: 5px;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+#puntenbeheer .btn.btn-info:hover,
+#puntenbeheer .btn.btn-info:active,
+#puntenbeheer .btn.btn-info:focus {
+    background-color: #009999;
+}
+
+#puntenbeheer .btn.btn-info.o:hover,
+#puntenbeheer .btn.btn-info.o:active,
+#puntenbeheer .btn.btn-info.o:focus {
+    background-color: #009999;
+}
+
+
+#puntenbeheer fieldset {
+    border: solid 1px darkgray
+}
+
+#puntenbeheer table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: -44px;
+}
+
+#puntenbeheer tr:nth-child(even){
+    background-color: whitesmoke;
+}
+
+#puntenbeheer .previewtable {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 1px solid darkgray;
+    visibility: hidden;
+}
+
+
+#puntenbeheer th {
+    text-align: center;
+}
+
+#puntenbeheer th a{
+    text-decoration: none;
+}
+
+#puntenbeheer td {
+    text-align: center;
+    width: 20%;
+}
+
+#puntenbeheer .pagination a {
+    color: #555555;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid darkgray;
+    margin-left: 5px;
+}
+
+
+#puntenbeheer .pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+#puntenbeheer .pagination ul
+{
+    list-style-type: none;
+    display: inline-block;
+    width: 150px;
+    float: right;
+    margin-bottom: 0;
+}
+
+
+#puntenbeheer .pagination  {
+    position: relative;
+    height: 0;
+    width: 100%;
+    top: 35px;
+    left:15px;
+
+}
+
+#puntenbeheer .laden  {
+    min-width: 100%;
+}
+
+
+
+#puntenbeheer .laden  p {
+    width: 100%;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+}
+
+#puntenbeheer .laden img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+##############################
+EDITORS
+##############################
+ */
+#welkomstmailwijzigen .editorbutton, #ssmailwijzigen .editorbutton, #puntenlijstwijzigen .editorbutton, #puntenpdfWijzigen .editorbutton {
+    margin-top: 15px;
+}
+#welkomstmailwijzigen .save, #ssmailwijzigen .save, #puntenlijstwijzigen .save, #puntenpdfWijzigen .save{
+    background-color: #6891A2;
+}
+
+/*
+##############################
+SERVERINFO
+##############################
+ */
+#serverinfo .dashKaartLinks {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    float: left;
+    font-size: 220%;
+    width: 25%;
+    margin-right: 10%;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+#serverinfo .clearfix{
+    height: 100%;
+}
+#serverinfo .dashKaartRechts {
+    width: 65%;
+    float: right;
+    transform: translateY(120%)
+}
+
+#serverinfo .status, #serverinfo .uptime, #serverinfo .cpu {
+    color: white;
+    height: 100px;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#serverinfo .status p, #serverinfo .uptime p, #serverinfo .cpu p {
+    font-weight: bold;
+    margin: 0;
+}
+
+#serverinfo .uptime {
+    background-color: #009999;
+}
+
+#serverinfo .cpu {
+    background-color: #4f4f4f;
+}
+
+#serverinfo .charts {
+    height: 450px;
+    width: 450px;
+    margin: 0 auto;
+}
+
+#serverinfo .row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#serverinfo .row2 {
+    margin-top: 100px;
+}
+
+.highcharts-yaxis-grid .highcharts-grid-line {
+    display: none;
+}
+
+/*
+##############################
+USERS
+##############################
+ */
+.upperbar {
+    background-color: #6891A2 !important;
+    color: white !important;
+}
+
+/*
+##############################
+config
+##############################
+ */
+#config .btn-primary {
+    background-color: #6891A2;
+}
+#config .btn-primary:hover {
+    background-color: #009999;
+}
+#config .fix, #config .fix2  {
+    display: inline;
+}
+
+#config .fix {
+    width: 30%;
+}
+
+#config .fix2 {
+    width: 65%;
+}
+/*
+##############################
+verzendwelkomstmail
+##############################
+ */
+#verzendwelkomstmail .btn-primary, #downloadpdf .btn-primary{
+    background-color: #6891A2;
+}
+
+#verzendwelkomstmail .btn-primary:hover, #downloadpdf .btn-primary:hover{
+    background-color: #009999;
+}
+
+#verzendwelkomstmail .sendMailForm, #downloadpdf .sendMailForm{
+    width: 50%;
+    margin: 0 auto;
+}
+/*
+##############################
+loginfo
+##############################
+ */
+
+#loginfo .btn-primary {
+    margin: 10px;
+    background-color: #6891A2;
+}
+
+#loginfo .btn-primary:hover {
+    background-color: #009999;
+}
+
+#loginfo .logtext {
+    height: 600px;
+}

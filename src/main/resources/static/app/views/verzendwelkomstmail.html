@@ -1,0 +1,19 @@
+<div class="contentContainer" id="verzendwelkomstmail">
+    <h1>Manueel welkomstmail verzenden</h1>
+    <form class="sendMailForm" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+        <!-- NAME -->
+        <div class="form-group">
+            <label>Voornaam</label>
+            <input type="text" name="voornaamEmail" class="form-control" ng-model="voornaamEmail" required>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group">
+            <label>Email adres</label>
+            <input type="email" name="emailadres" class="form-control" ng-model="emailadres" required>
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <input type="submit" class="btn btn-primary" value="Verzend mail" ng-disabled="userForm.$invalid">
+
+    </form>
+</div>

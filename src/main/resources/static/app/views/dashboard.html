@@ -1,0 +1,129 @@
+<div class="contentContainer" id="dashboard">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card clearfix" style="background-color: #00688b">
+                <div class="card-block">
+                    <div class="clearfix">
+                    <div class="dashKaartLinks">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </div>
+                    <div class="dashKaartRechts">
+                        <h3 class="card-title">Sync</h3>
+                        <p class="card-text" ng-show="duration">Duur laatste sync: {{duration}}</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card clearfix" style="background-color: #cc5490">
+                <div class="card-block">
+                    <div class="clearfix">
+                    <div class="dashKaartLinks">
+                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    </div>
+                    <div class="dashKaartRechts">
+                        <h3 class="card-title">Errors</h3>
+                        <p class="card-text"># Server errors: <span ng-show="!errors">0</span><span ng-show="errors">{{errors}}</span></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card clearfix" style="background-color: #ed7e00" ng-click="downloadlogfile()" >
+                <div class="clearfix">
+                <div class="dashKaartLinks">
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                </div>
+                <div class="dashKaartRechts">
+                    <h3 class="card-title">Logfile</h3>
+                    <p class="card-text">Download logfile</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card fix">
+                <div class="card-block">
+                    <div class="charts">
+                        <p class="showFix" ng-show="!hasNewStudents">Er zijn geen nieuwe smartschoolusers of informatcursisten na de laatste sync</p>
+                        <canvas ng-show="hasNewStudents" id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-colors="colors" chart-options="options">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card clearfix" style="background-color: #4f4f4f">
+                        <div class="card-block">
+                            <div class="clearfix">
+                                <div class="dashKaartLinks">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div class="dashKaartRechts">
+                                    <h3 class="card-title">cursisten</h3>
+                                    <p class="card-text"># cursisten: {{aantalCursisten}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card clearfix" style="background-color: #15744a">
+                        <div class="card-block">
+                            <div class="clearfix">
+                                <div class="dashKaartLinks">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div class="dashKaartRechts">
+                                    <h3 class="card-title">smartschool gebruikers</h3>
+                                    <p class="card-text"># gebruikers: {{aantalSSusers}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card clearfix" style="background-color: #8e388e">
+                        <div class="card-block">
+                            <div class="clearfix">
+                                <div class="dashKaartLinks">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                </div>
+                                <div class="dashKaartRechts">
+                                    <h3 class="card-title">Volle cursusen</h3>
+                                    <p class="card-text"># cursussen: {{aantalFullCourses}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card clearfix" style="background-color: #87421f">
+                        <div class="card-block">
+                            <div class="clearfix">
+                                <div class="dashKaartLinks">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                </div>
+                                <div class="dashKaartRechts">
+                                    <h3 class="card-title">Cursussen</h3>
+                                    <p class="card-text" ># cursussen: {{aantalCourses}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

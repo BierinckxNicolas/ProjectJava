@@ -1,0 +1,71 @@
+<div class="contentContainer" id="servicebeheer">
+    <div class="row">
+        <h1>Servicebeheer</h1>
+    </div>
+    <!-- FIRST ROW -->
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-md-8">
+            <div class="card clearfix">
+                <div class="card-block">
+                    <div class="clearfix">
+                        <div class="ServiceKaartLinks">
+                            Connectie Smartschool <i class="fa fa-arrows-h" aria-hidden="true"></i> Informat <span ng-show="lastSync"> - Laatste sync: {{lastSync}}</span>
+                        </div>
+                        <div class="ServiceKaartRechts">
+                            <input id="serviceToggle" type="checkbox" data-toggle="toggle" ng-model="serviceToggle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <!-- SECOND ROW -->
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-md-8">
+            <div class="card clearfix">
+                <div class="card-block">
+                    <div class="clearfix">
+                        <div class="ServiceKaartLinks">
+                            Automatische zending smartschoolmail
+                        </div>
+                        <div class="ServiceKaartRechts">
+                            <input id="ssmailToggle" type="checkbox" data-toggle="toggle" ng-model="ssmailToggle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <!-- THIRD ROW -->
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-md-8">
+            <div class="card clearfix">
+                <div class="card-block">
+                    <div class="clearfix">
+                        <div class="ServiceKaartLinks">
+                            Automatische zending welkomstmail
+                        </div>
+                        <div class="ServiceKaartRechts">
+                            <input id="welkomMailToggle" type="checkbox" data-toggle="toggle" ng-model="welkomMailToggle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <!-- BUTTON ROW -->
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-md-8">
+            <input type="button" class="btn btn-primary sync" value="Manuele synchronisatie" ng-click="doSync($event)">
+            <button class="btn btn-danger" id="turnAllOff" type="button" ng-click="turnAllOff($event)" ng-init="turnOff = true"><span>{{turnOffBtnTxt}}</span></button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

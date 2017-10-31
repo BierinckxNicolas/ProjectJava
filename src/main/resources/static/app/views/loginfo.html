@@ -1,0 +1,16 @@
+<div class="contentContainer" id="loginfo">
+    <h1>Logfile bekijken & downloaden</h1>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="text-align: center">
+            <md-datepicker ng-model="myDate" md-placeholder="Enter date" ng-change="format()"></md-datepicker><br>
+            <a download="" ng-click="format(); getLog()" class="btn btn-primary">
+                Bekijk de logfile van datum <span ng-show="!formattedDate">{{today}}</span><span ng-show="formattedDate">{{formattedDate}}</span>
+            </a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <textarea class="form-control logtext" ng-show="logtext">{{logtext}}</textarea>
+   <input type="button" value="download" ng-click="downloadLogfile()" class="btn btn-primary" ng-show="logtext">
+</div>

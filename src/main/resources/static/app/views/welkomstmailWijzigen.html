@@ -1,0 +1,10 @@
+<div class="contentContainer" id="welkomstmailwijzigen">
+    <h1>Welkomstmail wijzigen</h1>
+
+    <form method="post">
+        <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+        <button class="btn btn-default editorbutton" ng-click="getPreview()">Voorbeeld Weergeven</button>
+        <button class="btn btn-primary editorbutton save" ng-click="setContent($event)">Opslaan</button>
+    </form>
+
+</div>

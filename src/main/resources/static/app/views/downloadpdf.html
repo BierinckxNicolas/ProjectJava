@@ -1,0 +1,18 @@
+<div class="contentContainer" id="downloadpdf">
+    <h1>Manueel pdf downloaden voor een student</h1>
+    <div class="sendMailForm"> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+        <!-- NAME -->
+        <div class="form-group">
+            <label>Voornaam</label>
+            <input type="text" name="voornaampnt" class="form-control" ng-model="voornaampnt" required>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group">
+            <label>Achternaam</label>
+            <input type="text" name="achternaampnt" class="form-control" ng-model="achternaampnt">
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <input type="submit" class="btn btn-primary" value="Download pdf" ng-click="downloadpdf()">
+    </div>
+</div>

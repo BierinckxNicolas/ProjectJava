@@ -1,0 +1,53 @@
+<div class="contentContainer" id="mailbeheer">
+    <h1 class="title">Mails beheren</h1>
+
+    <div class="container">
+
+        <div class="col-md-4">
+            <h3>Welkomstmail</h3>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" ui-sref="app.welkomstmailWijzigen" value="Inhoud mail wijzigen">
+            </div>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" ui-sref="app.verzendwelkomstmail" value="Mail verzenden">
+            </div>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" value="Lijst cursisten zonder email downloaden" ng-click="downloadInfNoEmailFile()">
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4">
+            <h3>Smartschoolmail</h3>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" ui-sref="app.smartschoolmailWijzigen" value="Inhoud mail wijzigen">
+            </div>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" value="Lijst cursisten zonder email downloaden" ng-click="downloadSsNoEmailFile()">
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <h3>Puntenlijst</h3>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" ui-sref="app.puntenlijstWijzigen" value="Inhoud mail wijzigen">
+            </div>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" ui-sref="app.puntenpdfwijzigen" value="Inhoud pdf wijzigen">
+            </div>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" ui-sref="app.downloadpdf" value="Pdf downloaden" ng-show="showdownload">
+            </div>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" value="Lijst cursisten zonder email downloaden" ng-click="downloadPuntenNoEmailFile()">
+            </div>
+            <div class="row" name="wijzigen">
+                <input type="button" class="btn btn-info" ui-sref="app.puntenbeheer" value="Puntenlijsten genereren">
+            </div>
+        </div>
+    </div>
+
+
+</div>
